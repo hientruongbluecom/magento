@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hiennamespace_Mymodule>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Hiennamespace_Mymodule>
+    </modules>
+    <frontend>
+        <routers>
+            <mymodule>
+                <use>standard</use>
+                <args>
+                    <module>Hiennamespace_Mymodule</module>
+                    <frontName>mymodule</frontName>
+                </args>
+            </mymodule>
+        </routers>
+    </frontend>
+</config>
