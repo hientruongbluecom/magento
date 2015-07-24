@@ -998,3 +998,195 @@
 2015-07-24T03:32:24+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
 2015-07-24T03:35:51+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
 2015-07-24T03:51:02+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:29:41+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:31:06+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:31:14+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:31:47+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:32:16+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:32:43+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:34:41+00:00 ERR (3): Notice: Undefined variable: listfake  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 69
+2015-07-24T04:34:41+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getCurPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 62 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 46
+2015-07-24T04:34:41+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 63 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:34:41+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 78 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:34:41+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:34:41+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:34:46+00:00 ERR (3): Warning: Missing argument 3 for Mage_Adminhtml_Block_Widget_Container::_updateButton(), called in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Edit.php on line 22 and defined  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 138
+2015-07-24T04:34:46+00:00 ERR (3): Warning: Illegal offset type  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 150
+2015-07-24T04:34:46+00:00 ERR (3): Notice: Undefined variable: data  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 150
+2015-07-24T04:34:53+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] D:\project\magento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] D:\project\magento\lib\Zend\Controller\Response\Abstract.php:768
+[2] D:\project\magento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] D:\project\magento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] D:\project\magento\app\code\core\Mage\Core\Model\App.php:365
+[5] D:\project\magento\app\Mage.php:684
+[6] D:\project\magento\index.php:94
+</pre>
+2015-07-24T04:36:02+00:00 ERR (3): Notice: Undefined variable: listfake  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 69
+2015-07-24T04:36:02+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getCurPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 62 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 46
+2015-07-24T04:36:02+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 63 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:36:02+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 78 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:36:02+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:36:02+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:36:07+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:37:20+00:00 ERR (3): Notice: Undefined variable: listfake  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 69
+2015-07-24T04:37:20+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getCurPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 62 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 46
+2015-07-24T04:37:20+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 63 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:37:20+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 78 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:37:20+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:37:29+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:37:37+00:00 ERR (3): Warning: Missing argument 3 for Mage_Adminhtml_Block_Widget_Container::_updateButton(), called in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Edit.php on line 22 and defined  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 138
+2015-07-24T04:37:37+00:00 ERR (3): Warning: Illegal offset type  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 150
+2015-07-24T04:37:37+00:00 ERR (3): Notice: Undefined variable: data  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 150
+2015-07-24T04:37:40+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] D:\project\magento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] D:\project\magento\lib\Zend\Controller\Response\Abstract.php:768
+[2] D:\project\magento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] D:\project\magento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] D:\project\magento\app\code\core\Mage\Core\Model\App.php:365
+[5] D:\project\magento\app\Mage.php:684
+[6] D:\project\magento\index.php:94
+</pre>
+2015-07-24T04:37:55+00:00 ERR (3): Notice: Undefined variable: listfake  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 69
+2015-07-24T04:37:55+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getCurPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 62 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 46
+2015-07-24T04:37:55+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 63 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:37:55+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 78 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:37:55+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:38:01+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T04:38:08+00:00 ERR (3): Warning: Missing argument 3 for Mage_Adminhtml_Block_Widget_Container::_updateButton(), called in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Edit.php on line 22 and defined  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 138
+2015-07-24T04:38:08+00:00 ERR (3): Warning: Illegal offset type  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 150
+2015-07-24T04:38:08+00:00 ERR (3): Notice: Undefined variable: data  in D:\project\magento\app\code\core\Mage\Adminhtml\Block\Widget\Container.php on line 150
+2015-07-24T04:38:12+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] D:\project\magento\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] D:\project\magento\lib\Zend\Controller\Response\Abstract.php:768
+[2] D:\project\magento\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] D:\project\magento\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] D:\project\magento\app\code\core\Mage\Core\Model\App.php:365
+[5] D:\project\magento\app\Mage.php:684
+[6] D:\project\magento\index.php:94
+</pre>
+2015-07-24T04:38:18+00:00 ERR (3): Notice: Undefined variable: listfake  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 69
+2015-07-24T04:38:18+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getCurPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 62 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 46
+2015-07-24T04:38:18+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 63 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:38:18+00:00 ERR (3): Warning: Missing argument 1 for Wavethemes_Jmmegamenu_Block_Adminhtml_Jmmegamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 78 and defined  in D:\project\magento\app\code\local\Wavethemes\Jmmegamenu\Block\Adminhtml\Jmmegamenu\Grid.php on line 51
+2015-07-24T04:38:18+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-24T04:59:10+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T07:48:51+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T08:20:19+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T09:20:13+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T09:30:42+00:00 ERR (3): Warning: Creating default object from empty value  in D:\project\magento\lib\megamenu\mega.class.php on line 174
+2015-07-24T09:31:19+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:31:19+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:31:19+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:31:19+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:31:19+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:31:19+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:31:19+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:31:19+00:00 ERR (3): Notice: Undefined index: icon_url  in D:\project\magento\app\design\adminhtml\default\default\template\em_megamenupro\edit.phtml on line 252
+2015-07-24T09:32:33+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:32:33+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:32:33+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:32:33+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T09:33:38+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:33:38+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:33:38+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:33:38+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T09:36:08+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:36:08+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:36:08+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:36:08+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T09:37:09+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:37:09+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:37:09+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:37:09+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T09:37:36+00:00 ERR (3): Warning: scandir(D:\project\magento\var\cache\megamenupro,D:\project\magento\var\cache\megamenupro): The system cannot find the file specified. (code: 2)  in D:\project\magento\app\code\local\EM\Megamenupro\Helper\Data.php on line 43
+2015-07-24T09:37:36+00:00 ERR (3): Warning: scandir(D:\project\magento\var\cache\megamenupro): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Helper\Data.php on line 43
+2015-07-24T09:37:36+00:00 ERR (3): Warning: scandir(): (errno 2): No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Helper\Data.php on line 43
+2015-07-24T09:37:36+00:00 ERR (3): Warning: array_diff(): Argument #1 is not an array  in D:\project\magento\app\code\local\EM\Megamenupro\Helper\Data.php on line 43
+2015-07-24T09:37:36+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\code\local\EM\Megamenupro\Helper\Data.php on line 44
+2015-07-24T09:37:36+00:00 ERR (3): Warning: rmdir(D:\project\magento\var\cache\megamenupro): No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Helper\Data.php on line 47
+2015-07-24T09:37:57+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon,D:\project\magento\media\em\megamenupro\icon): The system cannot find the path specified. (code: 3)  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:37:57+00:00 ERR (3): Warning: opendir(D:\project\magento\media\em\megamenupro\icon): failed to open dir: No such file or directory  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 72
+2015-07-24T09:37:57+00:00 ERR (3): Warning: readdir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 73
+2015-07-24T09:37:57+00:00 ERR (3): Warning: closedir() expects parameter 1 to be resource, boolean given  in D:\project\magento\app\code\local\EM\Megamenupro\Block\Adminhtml\Variable.php on line 77
+2015-07-24T10:50:43+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T10:50:43+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T10:50:43+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T10:50:43+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T10:50:43+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T10:50:43+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:18+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:18+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:21+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:21+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:28+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:03:28+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:35+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:35+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:40+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:40+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:40+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:44+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:44+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:44+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:45+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:45+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:10:45+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:26+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:26+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:26+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:26+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:26+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:26+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:47+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 22: parser error : Opening and ending tag mismatch: magemenu line 20 and megamenu  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:47+00:00 ERR (3): Warning: simplexml_load_string():                 &lt;/megamenu&gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:13:47+00:00 ERR (3): Warning: simplexml_load_string():                            ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-24T11:14:49+00:00 ERR (3): Warning: include(Mage\Bc\Megamenu\Helper\Data.php): failed to open stream: No such file or directory  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-24T11:14:49+00:00 ERR (3): Warning: include(): Failed opening 'Mage\Bc\Megamenu\Helper\Data.php' for inclusion (include_path='D:\project\magento\app\code\local;D:\project\magento\app\code\community;D:\project\magento\app\code\core;D:\project\magento\lib;.;C:\xampp\php\PEAR')  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-24T11:30:54+00:00 ERR (3): Warning: include(Mage\Bc\Megamenu\Helper\Data.php): failed to open stream: No such file or directory  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-24T11:30:54+00:00 ERR (3): Warning: include(): Failed opening 'Mage\Bc\Megamenu\Helper\Data.php' for inclusion (include_path='D:\project\magento\app\code\local;D:\project\magento\app\code\community;D:\project\magento\app\code\core;D:\project\magento\lib;.;C:\xampp\php\PEAR')  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-24T11:33:04+00:00 ERR (3): Warning: include(Mage\Bc\Megamenu\Helper\Data.php): failed to open stream: No such file or directory  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-24T11:33:04+00:00 ERR (3): Warning: include(): Failed opening 'Mage\Bc\Megamenu\Helper\Data.php' for inclusion (include_path='D:\project\magento\app\code\local;D:\project\magento\app\code\community;D:\project\magento\app\code\core;D:\project\magento\lib;.;C:\xampp\php\PEAR')  in D:\project\magento\lib\Varien\Autoload.php on line 94
