@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <megamenu_adminhtml_megamenu_index>
+        <reference name="content">
+            <block type="megamenu/adminhtml_megamenu" name="megamenu" />
+        </reference>
+    </megamenu_adminhtml_megamenu_index>
+    <megamenu_adminhtml_megamenu_group>
+        <reference name="content">
+            <block type="megamenu/adminhtml_megamenugroup" name="megamenugroup" />
+        </reference>
+    </megamenu_adminhtml_megamenu_group>
+    <megamenu_adminhtml_megamenu_edit>
+        <reference name="head">
+            <action method="addItem" ><type>js</type><name>joomlart/jmmegamenu/event.simulate.js</name></action>
+        </reference>
+    </megamenu_adminhtml_megamenu_edit>
+</layout>

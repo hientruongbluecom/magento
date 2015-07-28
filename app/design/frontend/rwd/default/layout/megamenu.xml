@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<layout version="0.1.0">
+    <megamenu_index_index>
+        <reference name="content">
+            <block type="megamenu/megamenu" name="megamenu" />
+        </reference>
+    </megamenu_index_index>
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>bluecom/megamenu/css/megamenu.css</stylesheet></action>
+        </reference>
+
+    </default>
+</layout>
