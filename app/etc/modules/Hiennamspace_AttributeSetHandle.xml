@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config>
-    <modules>
-        <Hiennamspace_AttributeSetHandle>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Hiennamspace_AttributeSetHandle>
-    </modules>
-</config>
