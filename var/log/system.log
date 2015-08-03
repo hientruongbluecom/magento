@@ -3595,3 +3595,342 @@
 [5] D:\project\magento\app\Mage.php:684
 [6] D:\project\magento\index.php:94
 </pre>
+2015-07-29T08:21:42+00:00 ERR (3): Notice: Undefined variable: listfake  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\Grid.php on line 66
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Missing argument 1 for bc_megamenu_Block_Adminhtml_megamenu_Grid::getCurPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 62 and defined  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\Grid.php on line 43
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Missing argument 1 for bc_megamenu_Block_Adminhtml_megamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 63 and defined  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\Grid.php on line 48
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Missing argument 1 for bc_megamenu_Block_Adminhtml_megamenu_Grid::getLastPage(), called in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 78 and defined  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\Grid.php on line 48
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-29T08:21:42+00:00 ERR (3): Warning: Invalid argument supplied for foreach()  in D:\project\magento\app\design\adminhtml\default\default\template\widget\gridmenu.phtml on line 171
+2015-07-29T09:33:48+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:33:48+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:33:48+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:33:48+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:33:48+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:33:48+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:18+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:18+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:18+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:18+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:18+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:21+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:21+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:21+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:35:21+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:37:11+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:37:11+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:37:11+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:37:11+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:37:11+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:37:11+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:31+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:31+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:31+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:31+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:31+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:31+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:33+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:33+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:33+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:33+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:33+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:33+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:34+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:34+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:34+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:34+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:34+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:34+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:35+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:41:36+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:20+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:20+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:20+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:20+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:20+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:20+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:21+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:21+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:21+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:21+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:22+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:22+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:22+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:22+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:22+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:22+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:23+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:24+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:25+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : expected '&gt;'  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:25+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:25+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:25+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 164: parser error : Opening and ending tag mismatch: yourmodule line 160 and unparseable  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:25+00:00 ERR (3): Warning: simplexml_load_string():                     &lt;/ yourmodule &gt;  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T09:44:25+00:00 ERR (3): Warning: simplexml_load_string():                        ^  in D:\project\magento\lib\Varien\Simplexml\Config.php on line 510
+2015-07-29T10:26:40+00:00 ERR (3): Warning: include(Bc\Megamenu\Model\Megamenu.php): failed to open stream: No such file or directory  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-29T10:26:40+00:00 ERR (3): Warning: include(): Failed opening 'Bc\Megamenu\Model\Megamenu.php' for inclusion (include_path='D:\project\magento\app\code\local;D:\project\magento\app\code\community;D:\project\magento\app\code\core;D:\project\magento\lib;.;C:\xampp\php\PEAR')  in D:\project\magento\lib\Varien\Autoload.php on line 94
+2015-07-29T10:31:39+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 76
+2015-07-29T10:31:39+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 107
+2015-07-29T10:31:39+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 227
+2015-07-29T10:31:40+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 76
+2015-07-29T10:31:40+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 107
+2015-07-29T10:31:40+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 227
+2015-07-29T10:46:01+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T10:46:01+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T10:46:01+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T10:46:02+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T10:46:02+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T10:46:02+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T10:51:12+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T10:51:12+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T10:51:12+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T10:51:13+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T10:51:13+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T10:51:13+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T11:00:42+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T11:00:42+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T11:00:42+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T11:00:43+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T11:00:43+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T11:00:43+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T11:00:46+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T11:00:46+00:00 ERR (3): Notice: Undefined variable: orders  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 94
+2015-07-29T11:00:46+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T11:00:46+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T11:01:05+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T11:01:05+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T11:01:05+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-29T11:01:10+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 71
+2015-07-29T11:01:10+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 102
+2015-07-29T11:01:10+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 229
+2015-07-30T02:24:29+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 59
+2015-07-30T02:24:29+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 90
+2015-07-30T02:24:29+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 217
+2015-07-30T02:24:31+00:00 ERR (3): Notice: Undefined variable: menugroup  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 59
+2015-07-30T02:24:31+00:00 ERR (3): Notice: Undefined variable: parents  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 90
+2015-07-30T02:24:31+00:00 ERR (3): Notice: Undefined variable: statics  in D:\project\magento\app\code\local\bc\megamenu\Block\Adminhtml\megamenu\menu.php on line 217
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\css,D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\css): The system cannot find the path specified. (code: 3)  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\css): failed to open dir: No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(): (errno 2): No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images,D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images): The system cannot find the path specified. (code: 3)  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images): failed to open dir: No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(): (errno 2): No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images,D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images): The system cannot find the path specified. (code: 3)  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images): failed to open dir: No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(): (errno 2): No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images,D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images): The system cannot find the path specified. (code: 3)  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(D:\project\magento\downloader\..\.\skin\frontend\default\default\joomlart\jmmegamenu\images): failed to open dir: No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-30T06:28:55+00:00 ERR (3): Warning: scandir(): (errno 2): No such file or directory  in D:\project\magento\downloader\lib\Mage\Connect\Packager.php on line 243
+2015-07-31T04:02:34+00:00 DEBUG (7): 3
+2015-07-31T04:02:54+00:00 DEBUG (7): 3
+2015-07-31T04:08:08+00:00 DEBUG (7): mgmenu_4
+2015-07-31T04:15:20+00:00 DEBUG (7): 0
+2015-07-31T04:15:20+00:00 DEBUG (7): 0
+2015-07-31T04:15:20+00:00 DEBUG (7): 0
+2015-07-31T04:15:20+00:00 DEBUG (7): 0
+2015-07-31T04:15:20+00:00 DEBUG (7): 0
+2015-07-31T04:17:53+00:00 DEBUG (7): 0
+2015-07-31T04:17:53+00:00 DEBUG (7): 0
+2015-07-31T04:17:53+00:00 DEBUG (7): 0
+2015-07-31T04:17:53+00:00 DEBUG (7): 0
+2015-07-31T04:17:53+00:00 DEBUG (7): 0
+2015-07-31T04:18:07+00:00 DEBUG (7): 0
+2015-07-31T04:18:07+00:00 DEBUG (7): 0
+2015-07-31T04:18:07+00:00 DEBUG (7): 0
+2015-07-31T04:18:07+00:00 DEBUG (7): 0
+2015-07-31T04:18:07+00:00 DEBUG (7): 0
+2015-07-31T04:18:16+00:00 DEBUG (7): 0
+2015-07-31T04:18:16+00:00 DEBUG (7): 0
+2015-07-31T04:18:16+00:00 DEBUG (7): 0
+2015-07-31T04:18:16+00:00 DEBUG (7): 0
+2015-07-31T04:18:16+00:00 DEBUG (7): 0
+2015-07-31T04:20:53+00:00 DEBUG (7): 0
+2015-07-31T04:20:53+00:00 DEBUG (7): 0
+2015-07-31T04:20:53+00:00 DEBUG (7): 0
+2015-07-31T04:20:53+00:00 DEBUG (7): 0
+2015-07-31T04:20:53+00:00 DEBUG (7): 0
+2015-07-31T04:21:29+00:00 DEBUG (7): 0
+2015-07-31T04:21:29+00:00 DEBUG (7): 0
+2015-07-31T04:21:29+00:00 DEBUG (7): 0
+2015-07-31T04:21:29+00:00 DEBUG (7): 0
+2015-07-31T04:21:29+00:00 DEBUG (7): 0
+2015-07-31T04:36:05+00:00 DEBUG (7): 0
+2015-07-31T04:36:05+00:00 DEBUG (7): 0
+2015-07-31T04:36:05+00:00 DEBUG (7): 0
+2015-07-31T04:36:05+00:00 DEBUG (7): 0
+2015-07-31T04:36:05+00:00 DEBUG (7): 0
+2015-07-31T04:42:38+00:00 DEBUG (7): 0
+2015-07-31T04:42:38+00:00 DEBUG (7): 0
+2015-07-31T04:42:38+00:00 DEBUG (7): 0
+2015-07-31T04:42:38+00:00 DEBUG (7): 0
+2015-07-31T04:42:38+00:00 DEBUG (7): 0
+2015-07-31T04:53:23+00:00 DEBUG (7): 0
+2015-07-31T04:53:23+00:00 DEBUG (7): 0
+2015-07-31T04:53:23+00:00 DEBUG (7): 0
+2015-07-31T04:53:23+00:00 DEBUG (7): 0
+2015-07-31T04:53:23+00:00 DEBUG (7): 0
+2015-07-31T04:58:19+00:00 DEBUG (7): 0
+2015-07-31T04:58:19+00:00 DEBUG (7): 0
+2015-07-31T04:58:19+00:00 DEBUG (7): 0
+2015-07-31T04:58:19+00:00 DEBUG (7): 0
+2015-07-31T04:58:19+00:00 DEBUG (7): 0
+2015-07-31T04:58:19+00:00 DEBUG (7): 0
+2015-07-31T05:00:21+00:00 DEBUG (7): 0
+2015-07-31T05:00:21+00:00 DEBUG (7): 0
+2015-07-31T05:00:21+00:00 DEBUG (7): 0
+2015-07-31T05:00:21+00:00 DEBUG (7): 0
+2015-07-31T05:00:21+00:00 DEBUG (7): 0
+2015-07-31T05:00:21+00:00 DEBUG (7): 0
+2015-07-31T05:01:29+00:00 DEBUG (7): 0
+2015-07-31T05:01:29+00:00 DEBUG (7): 0
+2015-07-31T05:01:29+00:00 DEBUG (7): 0
+2015-07-31T05:01:29+00:00 DEBUG (7): 0
+2015-07-31T05:01:29+00:00 DEBUG (7): 0
+2015-07-31T05:01:29+00:00 DEBUG (7): 0
+2015-07-31T05:01:59+00:00 DEBUG (7): 0
+2015-07-31T05:01:59+00:00 DEBUG (7): 0
+2015-07-31T05:01:59+00:00 DEBUG (7): 0
+2015-07-31T05:01:59+00:00 DEBUG (7): 0
+2015-07-31T05:01:59+00:00 DEBUG (7): 0
+2015-07-31T05:01:59+00:00 DEBUG (7): 0
+2015-07-31T06:04:33+00:00 DEBUG (7): 0
+2015-07-31T06:04:33+00:00 DEBUG (7): 0
+2015-07-31T06:04:33+00:00 DEBUG (7): 0
+2015-07-31T06:04:33+00:00 DEBUG (7): 0
+2015-07-31T06:04:33+00:00 DEBUG (7): 0
+2015-07-31T06:04:33+00:00 DEBUG (7): 0
+2015-07-31T06:15:30+00:00 DEBUG (7): 0
+2015-07-31T06:15:30+00:00 DEBUG (7): 0
+2015-07-31T06:15:30+00:00 DEBUG (7): 0
+2015-07-31T06:15:30+00:00 DEBUG (7): 0
+2015-07-31T06:15:30+00:00 DEBUG (7): 0
+2015-07-31T06:15:30+00:00 DEBUG (7): 0
+2015-07-31T06:25:03+00:00 DEBUG (7): 0
+2015-07-31T06:25:03+00:00 DEBUG (7): 0
+2015-07-31T06:25:03+00:00 DEBUG (7): 0
+2015-07-31T06:25:03+00:00 DEBUG (7): 0
+2015-07-31T06:25:03+00:00 DEBUG (7): 0
+2015-07-31T06:25:03+00:00 DEBUG (7): 0
+2015-07-31T06:29:42+00:00 DEBUG (7): 0
+2015-07-31T06:29:42+00:00 DEBUG (7): 0
+2015-07-31T06:29:42+00:00 DEBUG (7): 0
+2015-07-31T06:29:42+00:00 DEBUG (7): 0
+2015-07-31T06:29:42+00:00 DEBUG (7): 0
+2015-07-31T06:29:42+00:00 DEBUG (7): 0
+2015-08-03T08:18:52+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:18:52+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:18:52+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:18:52+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:34:53+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:34:53+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:34:53+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:34:53+00:00 DEBUG (7): Array
+(
+)
+
+2015-08-03T08:34:53+00:00 DEBUG (7): Array
+(
+)
+

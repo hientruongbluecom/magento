@@ -1,8 +1,0 @@
-<config>
-    <modules>
-        <DevBlog_MegaMenu>
-            <active>true</active>
-            <codePool>local</codePool>
-        </DevBlog_MegaMenu>
-    </modules>
-</config>

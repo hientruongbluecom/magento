@@ -2,215 +2,143 @@
 /**
  * Created by PhpStorm.
  * User: admin
- * Date: 7/24/15
- * Time: 5:54 PM
+ * Date: 7/30/15
+ * Time: 2:39 PM
  */
 class bc_megamenu_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    function get($var, $attributes=array()){
-        if(isset($attributes[$var])){
-            return $attributes[$var];
-        }
-        return Mage::getStoreConfig("bc_megamenu/bc_megamenu/$var");
-    }
-    public function  treemenu($id, $indent, $list, &$children, $maxlevel=9999, $level=0,$label,$key,$parent)
+    private $_menuData = null;
+    public function saveCurrentCategoryIdToSession()
     {
-
-        if (@$children[$id] && $level <= $maxlevel)
-        {
-            foreach ($children[$id] as $v)
-            {
-
-                $id = $v->$key;
-                $pre = '- ';
-                $spacer = '---';
-                if ( $v->$parent == 0 ) {
-                    $txt 	= $v->$label;
-                } else {
-                    $txt 	= $pre . $v->$label;
-                }
-                $pt = $v->$parent;
-                $list[$id] = $v;
-                $list[$id]->$label = "$indent$txt";
-                $list[$id]->children = count(@$children[$id] );
-                $list = $this->treemenu( $id, $indent . $spacer, $list,$children, $maxlevel, $level+1,$label,$key,$parent );
-            }
+        $currentCategory = Mage::registry('current_category');
+        $currentCategoryId = 0;
+        if (is_object($currentCategory)) {
+            $currentCategoryId = $currentCategory->getId();
         }
-        return $list;
-
+        Mage::getSingleton('catalog/session')
+            ->setCustomMenuCurrentCategoryId($currentCategoryId);
     }
-    public function getoutputList($root = 0,$collections,$labelfield = "title",$keyfield = "id",$parentfield = "parent",$addtop = false){
-
-        foreach($collections as $collection){
-
-            $pt 	= $collection->$parentfield;
-            $list 	= @$children[$pt] ? $children[$pt] : array();
-            array_push( $list, $collection );
-            $children[$pt] = $list;
-        }
-
-        $lists = $this->treemenu($root, '', array(),$children,9999, 0,$labelfield,$keyfield,$parentfield );
-        if($addtop){
-            $outputs = array('0' => "Top");
-        }
-        foreach($lists as $id => $list){
-
-            $lists[$id]->$labelfield = "--".$lists[$id]->$labelfield;
-            $outputs[$lists[$id]->$keyfield] =  $lists[$id]->$labelfield;
-
-        }
-        return $outputs;
-
-    }
-    public function prepareGridCollection($root = 0,&$collections,$labelfield = "title",$keyfield = "id",$parentfield = "parent",$addtop = false){
-
-        foreach($collections as $collection){
-
-            $pt 	= $collection->$parentfield;
-            $list 	= @$children[$pt] ? $children[$pt] : array();
-            array_push( $list, $collection );
-            $children[$pt] = $list;
-        }
-
-        $lists = $this->treemenu($root, '', array(),$children,9999, 0,$labelfield,$keyfield,$parentfield );
-        if($addtop){
-            $outputs = array('0' => "Top");
-        }
-        foreach($lists as $id => $list){
-
-            $lists[$id]->$labelfield = $lists[$id]->$labelfield;
-
-        }
-
-        return $lists;
-
-    }
-    public function getActivemenu($collections){
-        $baseurl = Mage::getBaseUrl();
-        $currenturl  = Mage::helper('core/url')->getCurrentUrl();
-        $alias = "";
-        $currenturls = explode("?alias=",$currenturl);
-        $currenturl =  $currenturls[0];
-        if(isset($currenturls[1])){
-            $alias = $currenturls[1];
-        }
-
-        $websiteId= Mage::app()->getStore()->getWebsiteId();
-        $CurrentPage = Mage::app()->getWebsite($websiteId)->getConfig('web/default/cms_home_page');
-
-        //homepage with or without index.php
-        if($currenturl == $baseurl || $currenturl."index.php".DS == $baseurl) $currenturl = $baseurl.$CurrentPage;
-
-        //find a menu item whose link match curent url
-        foreach($collections as $collection){
-
-            if($collection->menutype == 2) {
-                if($collection->link == $currenturl) { return $collection; }
-            }else{
-                if(strpos($currenturl,$baseurl.$collection->url) !==  false && $collection->menualias == $alias) { return $collection; }
-            }
-        }
-
-
-        // search for a category menu item that match current category
-        $catcollection = false;
-        foreach($collections as $collection){
-            //check categories items only
-            if(!$collection->menutype) {
-                if($this->isCategoryActive($collection->catid)){
-                    $catcollection = $collection;
-                }
-            }
-        }
-        return $catcollection;
-    }
-    public function isCategoryActive($catid){
-        if (Mage::getSingleton('catalog/layer')) {
-            $currentcat =  Mage::getSingleton('catalog/layer')->getCurrentCategory();
-            return in_array($catid, $currentcat->getPathIds());
-        }
-
-        return false;
-
-    }
-    public function getListcms($storeid = null){
-
-        if($storeid == null){
-            $storeid = Mage::app()->getWebsite(true)->getDefaultStore()->getId();
-        }
-
-        $links = array();
-        $cms_pages = Mage::getModel('cms/page')->getCollection()->addStoreFilter($storeid);
-        $cms_pages->load();
-        foreach($cms_pages as $_page)
-        {
-            $data = $_page->getData();
-            if($data['identifier']=='no-route')
-                continue;
-            $links[$data['identifier']] =  $data['identifier'];
-        }
-
-        return $links;
-
-
-    }
-    public function getorders($id){
-
-        $item = Mage::getModel('megamenu/megamenu')->load($id);
-        $resource = Mage::getSingleton('core/resource');
-        $read= $resource->getConnection('core_read');
-        $menutable = $resource->getTableName('megamenu');
-        $query = 'SELECT ordering AS value, title AS label'
-            . ' FROM '.$menutable
-            . ' WHERE parent = '.(int) $item->parent
-            . ' AND status >= 0'
-            . ' ORDER BY ordering';
-        $rows = $read->fetchAll($query);
-        $rows = array_values($rows);
-        $rows[] = array('value' => count($rows)+1,"label" => "Last");
-        array_unshift($rows,array('value' => 0,"label" => "First"));
-        foreach($rows as $k => $v){
-            $rows[$k]['label'] = $rows[$k]['value']." ".$rows[$k]['label'];
-        }
-        return $rows;
-    }
-    function reorder( $where='' )
+    public function initCurrentCategory()
     {
-        $k = "menu_id";
-        $resource = Mage::getSingleton('core/resource');
-        $read= $resource->getConnection('core_read');
-        $write = $resource->getConnection('core_write');
-        $menutable = $resource->getTableName('megamenu');
-        $query = 'SELECT menu_id, ordering'
-            . ' FROM '. $menutable
-            . ' WHERE ordering >= 0' . ( $where ? ' AND '. $where : '' )
-            . ' ORDER BY ordering'
-        ;
-        if (!($orders =  $read->fetchAll($query)))
-        {
-            return false;
+        $currentCategoryId = Mage::getSingleton('catalog/session')->getCustomMenuCurrentCategoryId();
+        $currentCategory = null;
+        if ($currentCategoryId) {
+            $currentCategory = Mage::getModel('catalog/category')
+                ->setStoreId(Mage::app()->getStore()->getId())
+                ->load($currentCategoryId);
         }
-        // compact the ordering numbers
-        for ($i=0, $n=count( $orders ); $i < $n; $i++)
-        {
-            if ($orders[$i]['ordering'] >= 0)
-            {
-                if ($orders[$i]['ordering'] != $i+1)
-                {
-
-                    $orders[$i]['ordering'] = $i+1;
-                    $query = 'UPDATE '.$menutable
-                        . ' SET ordering = '. (int) $orders[$i]['ordering']
-                        . ' WHERE '. $k .' = \''. $orders[$i][$k].'\''
-                    ;
-
-                    $write->query($query);
-                }
-            }
-        }
-        return true;
+        Mage::unregister('current_category');
+        Mage::register('current_category', $currentCategory);
     }
-
-
+    public function getMenuData()
+    {
+        if (!is_null($this->_menuData)) return $this->_menuData;
+        $blockClassName = Mage::getConfig()->getBlockClassName('megamenu/navigation');
+        $block = new $blockClassName();
+        $categories = $block->getStoreCategories();
+        if (is_object($categories)) $categories = $block->getStoreCategories()->getNodes();
+        if (Mage::getStoreConfig('megamenu/general/ajax_load_content')) {
+            $_moblieMenuAjaxUrl = str_replace('http:', '', Mage::getUrl('megamenu/ajaxmobilemenuitem'));
+            $_menuAjaxUrl = str_replace('http:', '', Mage::getUrl('megamenu/ajaxmenuitem'));
+        } else {
+            $_moblieMenuAjaxUrl = '';
+            $_menuAjaxUrl = '';
+        }
+        $this->_menuData = array(
+            '_block'                        => $block,
+            '_categories'                   => $categories,
+            '_moblieMenuAjaxUrl'            => $_moblieMenuAjaxUrl,
+            '_menuAjaxUrl'                  => $_menuAjaxUrl,
+            '_showHomeLink'                 => Mage::getStoreConfig('megamenu/general/show_home_link'),
+            '_popupWidth'                   => Mage::getStoreConfig('megamenu/popup/width') + 0,
+            '_popupTopOffset'               => Mage::getStoreConfig('megamenu/popup/top_offset') + 0,
+            '_popupDelayBeforeDisplaying'   => Mage::getStoreConfig('megamenu/popup/delay_displaying') + 0,
+            '_popupDelayBeforeHiding'       => Mage::getStoreConfig('megamenu/popup/delay_hiding') + 0,
+            '_rtl'                          => Mage::getStoreConfig('megamenu/general/rtl') + 0,
+            '_mobileMenuEnabled'            => Mage::getStoreConfig('megamenu/general/mobile_menu') + 0,
+            '_mobileMenuWidthInit'          => Mage::getStoreConfig('megamenu/general/mobile_menu_width_init') + 0,
+        );
+        return $this->_menuData;
+    }
+    public function getMobileMenuContent()
+    {
+        $menuData = Mage::helper('megamenu')->getMenuData();
+        extract($menuData);
+        if (!$_mobileMenuEnabled) return '';
+        // --- Home Link ---
+        $homeLinkUrl        = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+        $homeLinkText       = $this->__('Home');
+        $homeLink           = '';
+        if ($_showHomeLink) {
+            $homeLink = <<<HTML
+<div id="menu-mobile-0" class="menu-mobile level0">
+    <div class="parentMenu">
+        <a href="$homeLinkUrl">
+            <span>$homeLinkText</span>
+        </a>
+    </div>
+</div>
+HTML;
+        }
+        // --- Menu Content ---
+        $mobileMenuContent = '';
+        $mobileMenuContentArray = array();
+        foreach ($_categories as $_category) {
+            $mobileMenuContentArray[] = $_block->drawMegamenuMobileItem($_category);
+        }
+        if (count($mobileMenuContentArray)) {
+            $mobileMenuContent = implode("\n", $mobileMenuContentArray);
+        }
+        // --- Result ---
+        $menu = <<<HTML
+$homeLink
+$mobileMenuContent
+<div class="clearBoth"></div>
+HTML;
+        return $menu;
+    }
+    public function getMenuContent()
+    {
+        $menuData = Mage::helper('megamenu')->getMenuData();
+        extract($menuData);
+        // --- Home Link ---
+        $homeLinkUrl        = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+        $homeLinkText       = $this->__('Home');
+        $homeLink           = '';
+        if ($_showHomeLink) {
+            $homeLink = <<<HTML
+<div class="menu">
+    <div class="parentMenu menu0">
+        <a href="$homeLinkUrl">
+            <span>$homeLinkText</span>
+        </a>
+    </div>
+</div>
+HTML;
+        }
+        // --- Menu Content ---
+        $menuContent = '';
+        $menuContentArray = array();
+        $c=0;
+        foreach ($_categories as $_category) {
+            $_block->drawMegamenuItem($_category,$c);
+            $c++;
+        }
+        $topMenuArray = $_block->getTopMenuArray();
+        if (count($topMenuArray)) {
+            $topMenuContent = implode("\n", $topMenuArray);
+        }
+        $popupMenuArray = $_block->getPopupMenuArray();
+        $popupMenuContent = '';
+        if (count($popupMenuArray)) {
+            $popupMenuContent = implode("\n", $popupMenuArray);
+        }
+        // --- Result ---
+        $topMenu = <<<HTML
+$homeLink
+$topMenuContent
+<div class="clearBoth"></div>
+HTML;
+        return array('topMenu' => $topMenu, 'popupMenu' => $popupMenuContent);
+    }
 }
-?>
