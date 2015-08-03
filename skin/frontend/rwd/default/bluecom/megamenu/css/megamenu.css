@@ -239,6 +239,9 @@ div.menu.active a {
 div.menu.active .parentMenu{
     background: #fff;
     border: 1px solid #000;
+    -webkit-border: 1px solid #000;
+    -moz-border: 1px solid #000;
+    -mz-border: 1px solid #000;
     border-bottom-color: #fff;
     cursor: pointer;
     margin-top: -2px;
@@ -524,4 +527,8 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
     text-transform: uppercase;
     color: #000;
     letter-spacing: 0.5px;
+}
+img.mega-nav-item-image {
+    width: 250px;
+    height: auto;
 }
