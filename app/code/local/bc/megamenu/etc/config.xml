@@ -75,7 +75,7 @@
             <general>
                 <enabled>0</enabled>
                 <ajax_load_content>0</ajax_load_content>
-                <mobile_menu>1</mobile_menu>
+                <mobile_menu>0</mobile_menu>
                 <mobile_menu_width_init>600</mobile_menu_width_init>
                 <display_empty_categories>1</display_empty_categories>
                 <max_level>4</max_level>

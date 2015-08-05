@@ -7,13 +7,3 @@
     mgPopupMenuContent = <?php echo Mage::helper('core')->jsonEncode($menuContent['popupMenu']); ?>;
     //]]>
 </script>
-<script type="text/javascript">
-    //<![CDATA[
-    <?php $mobileMenuContent = Mage::helper('megamenu')->getMobileMenuContent(); ?>
-    mgMobileMenuContent = <?php echo Mage::helper('core')->jsonEncode($mobileMenuContent); ?>;
-    mgMegamenuMobileToggle();
-    Event.observe(window, 'resize', function() {
-        mgMegamenuMobileToggle();
-    });
-    //]]>
-</script>

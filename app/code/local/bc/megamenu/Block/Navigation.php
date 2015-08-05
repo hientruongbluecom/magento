@@ -70,77 +70,66 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         $active = ''; if ($this->isCategoryActive($category)) $active = ' act';
         // --- Popup functions for show ---
         $drawPopup = ($blockHtml || count($activeChildren));
-        if ($drawPopup) {
-            if($first==0){
-                $htmlTop.= '<div id="menu' . $id . '" class="first menu' . $active . '" onmouseover="mgShowMenuPopup(this, event, \'popup' . $id . '\');" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
 
-            }else{
-                $htmlTop.= '<div id="menu' . $id . '" class="menu' . $active . '" onmouseover="mgShowMenuPopup(this, event, \'popup' . $id . '\');" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
-            }
-            } else {
-            if($first==0){
-                $htmlTop.= '<div id="menu' . $id . '" class="first menu' . $active . '">';
-            }else{
-                $htmlTop.= '<div id="menu' . $id . '" class="menu' . $active . '">';
-            }
+        if($first==0){
+            $htmlTop.= '<li id="menu' . $id . '" class="first menu' . $active . '">';
+
+        }else{
+            $htmlTop.= '<li id="menu' . $id . '" class="menu' . $active . '" >';
         }
         // --- Top Menu Item ---
-        $htmlTop.= '<div class="parentMenu">';
-        if ($level == 0 && $drawPopup) {
-            $htmlTop.= '<a  class="level' . $level . $active . '" href="javascript:void(0);" rel="'.$this->getCategoryUrl($category).'">';
-        } else {
-            $htmlTop.= '<a  class="level' . $level . $active . '" href="'.$this->getCategoryUrl($category).'">';
-        }
+        //$htmlTop.= '<div class="parentMenu">';
+
+        $htmlTop.= '<a  class="level' . $level . $active . '" href="'.$this->getCategoryUrl($category).'">';
+
         $name = $this->escapeHtml($category->getName());
         if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) {
             $name = str_replace(' ', '&nbsp;', $name);
         }
         $htmlTop.= '<span>' . $name . '</span>';
         $htmlTop.= '</a>';
-        $htmlTop.= '</div>';
-        $htmlTop.= '</div>';
-        $this->_topMenu.=  $htmlTop;
+        /*sub menu dropdown*/
         /*get img category parent*/
         $helper    = $this->helper('catalog/output');
         $categoryImage  = Mage::getModel('catalog/category')->load($category->getId());
-        $imgHtml   = '';
+        $imgCatHtml   = '';
         if ($imgUrl = $categoryImage->getImageUrl()) {
-            $imgHtml = '<div class="thumb-image-menu"> <a href="'.$this->getCategoryUrl($category).'"><img class="mega-nav-item-image" src="'.$imgUrl.'" alt="'.$this->htmlEscape($categoryImage->getName()).'" title="'.$this->htmlEscape($categoryImage->getName()).'" /></a></div>';
-            $imgHtml = $helper->categoryAttribute($categoryImage, $imgHtml, 'image');
+            $imgCatHtml = '<li class="thumb-image-menu"> <a href="'.$this->getCategoryUrl($category).'"><img class="mega-nav-item-image" src="'.$imgUrl.'" alt="'.$this->htmlEscape($categoryImage->getName()).'" title="'.$this->htmlEscape($categoryImage->getName()).'" /></a></li>';
+            $imgCatHtml = $helper->categoryAttribute($categoryImage, $imgCatHtml, 'image');
         }
         /*end get img category parent*/
         // --- Add Popup block (hidden) ---
         if ($drawPopup) {
-            $htmlPopup = '';
+            //$htmlPopup = '';
             // --- Popup function for hide ---
-            $htmlPopup.= '<div id="popup' . $id . '" class="mg-mega-menu-popup" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')" onmouseover="mgPopupOver(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
+            $htmlTop.= '<ul id="popup' . $id . '" class="mg-mega-menu-popup" >';
             // --- draw Sub Categories ---
 
             if (count($activeChildren)) {
                 $columns = (int)Mage::getStoreConfig('megamenu/columns/count');
-                $htmlPopup.= '<div class="column"';
-                $htmlPopup.= $this->drawColumns($activeChildren, $columns);
-                $htmlPopup.= $imgHtml;
-                $htmlPopup.= '<div class="view_all_mn"><a  class="" href="'.$this->getCategoryUrl($category).'">';
+                $htmlTop.= $this->drawColumns($activeChildren, $columns);
+                $htmlTop.= $imgCatHtml;
+                $htmlTop.= '<li class="view_all_mn"><a  class="" href="'.$this->getCategoryUrl($category).'">';
                 if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) {
                     $name = str_replace(' ', '&nbsp;', $name);
                 }
-                $htmlPopup.= '<span class="go-all"> View All ' . $name . '</span>';
-                $htmlPopup.= '<span class="go-all-icon"> >></span>';
-                $htmlPopup.= '</a>';
-                $htmlPopup.= '</div>';
-                $htmlPopup.= '<div class="clearBoth"></div>';
-                $htmlPopup.= '</div>';
+                $htmlTop.= '<span class="go-all"> View All ' . $name . '</span>';
+                $htmlTop.= '<span class="go-all-icon"> >></span>';
+                $htmlTop.= '</a>';
+                $htmlTop.= '</li>';
             }
             // --- draw Custom User Block ---
             if ($blockHtml) {
-                $htmlPopup.= '<div id="' . $blockId . '" class="block2"';
-                $htmlPopup.= $blockHtml;
-                $htmlPopup.= '</div>';
+                $htmlTop.= '<ul id="' . $blockId . '" class="block2"';
+                $htmlTop.= $blockHtml;
+                $htmlTop.= '</ul>';
             }
-            $htmlPopup.= '</div>';
-            $this->_popupMenu.= $htmlPopup;
+            $htmlTop.= '</ul>';
         }
+        /*end sub menu drop-down*/
+        $htmlTop.= '</li>';
+        $this->_topMenu.=  $htmlTop;
+
     }
     public function drawMobileMenuItem($children, $level = 1)
     {
@@ -233,9 +222,9 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
             if ($i == 1) $class.= ' first';
             if ($i == $lastColumnNumber) $class.= ' last';
             if ($i % 2) $class.= ' odd'; else $class.= ' even';
-            $html.= '<div class="column' . $class . '" style="width:' . $colwidth . 'px;">';
+            $html.= '<li class="column' . $class . '" style="width:' . $colwidth . 'px;">';
             $html.= $this->drawMenuItem($value, 1);
-            $html.= '</div>';
+            $html.= '</li>';
             $i++;
         }
         return $html;

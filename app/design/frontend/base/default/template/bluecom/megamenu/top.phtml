@@ -17,7 +17,7 @@ $mgInitContent = echo '
         </div>
         <div class="clearBoth"></div>
     </div>
-    <div id="megamenu" class="$xRtl" style="display:none;">
+    <ul id="megamenu" class="$xRtl" style="display:none;">
         <div class="menu">
             <div class="parentMenu menu0">
                 <a href="javascript:;">
@@ -26,24 +26,7 @@ $mgInitContent = echo '
             </div>
         </div>
         <div class="clearBoth"></div>
-    </div>
-    <div id="megamenu-mobile" class="$xRtl" style="display:none;">
-        <div id="menu-button" onclick="mgMenuButtonToggle()">
-            <a href="javascript:void(0);">
-                <span>$txtMenu</span>
-            </a>
-        </div>
-        <div id="menu-content" style="display:none;">
-            <div id="menu-mobile-loading" class="menu-mobile level0">
-                <div class="parentMenu">
-                    <a href="javascript:;">
-                        <span>$txtLoading</span>
-                    </a>
-                </div>
-            </div>
-            <div class="clearBoth"></div>
-        </div>
-    </div>';
+    </ul>';
 ?>
 <div class="nav-container" id="mg-nav-container"></div>
 <script type="text/javascript">
@@ -65,23 +48,6 @@ $mgInitContent = echo '
     if ($('mg-nav-container') != undefined) {
         $('mg-nav-container').update(<?php echo Mage::helper('core')->jsonEncode($mgInitContent); ?>);
     }
-    <?php if (Mage::getStoreConfig('megamenu/general/ajax_load_content')) : ?>
-    mgMegamenuMobileToggle();
-    Event.observe(window, 'resize', function() {
-        mgMegamenuMobileToggle();
-    });
-    <?php endif; ?>
     //]]>
 </script>
 
-<script type="text/javascript">
-    //<![CDATA[
-    Event.observe(document, 'dom:loaded', function(){
-        $$('.skip-nav').each(function(element) {
-            element.observe('click', function(event) {
-                mgMenuButtonToggle();
-            });
-        });
-    });
-    //]]>
-</script>
