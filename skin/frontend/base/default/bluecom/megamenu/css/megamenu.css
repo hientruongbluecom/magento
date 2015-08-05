@@ -5,12 +5,14 @@
 #megamenu {
     position: relative;
     font-size: 14px;
-    padding: 0px;
+    padding: 0 0 3px 0;
     width: 100%;
-    height: 33px;
+    height: 36px;
     margin: 0;
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
+    background: url('../images/bg-nav.gif') repeat-x;
+    background-position: 0 1px;
+    /*border-bottom: 1px solid #000;
+    border-top: 1px solid #000;*/
 }
 /*IE7 fix*/
 *:first-child+html #megamenu {
@@ -20,6 +22,7 @@ div.menu {
     float: left;
     padding: 0px ;
     margin: 0px;
+    height: 36px;
 }
 div.menu a:link, div.menu a:visited {
     display: block;
@@ -30,7 +33,7 @@ div.menu a:link, div.menu a:visited {
     float: left;
     padding: 10px 8px 3px 8px;
     border: 1px solid transparent;
-    height: 31px;
+    height: 35px;
 }
 div.menu a span:hover {
     cursor: pointer;
@@ -183,10 +186,8 @@ div.mg-mega-menu-popup {
     padding: 3px 0 0 14px;
     overflow: hidden;
 }
-div.menu a:link, div.menu a:visited {
-}
 div.menu a:hover {
-    background: #f1f1f1;
+    background: #ffffff;
 }
 div.menu a, div.mg-mega-menu-popup a {
     -webkit-transition: all .1s linear;
@@ -221,7 +222,6 @@ a.level2:link, a.level2:visited {
     background-color: #fff;
 }
 div.menu a:link, div.menu a:visited {
-    background-color: #fff;
     color: #000;
 }
 a.level1:link, a.level1:visited {
@@ -230,27 +230,22 @@ a.level1:link, a.level1:visited {
 a.level2:link, a.level2:visited {
     color: #636363;
 }
-div.menu a:hover,
-div.menu.act a,
-div.menu.active a {
-    background: #fff;
-
-}
-div.menu.active .parentMenu{
-    background: #fff;
+div.menu.active .parentMenu a,div.menu .parentMenu a:hover{
     border: 1px solid #000;
     -webkit-border: 1px solid #000;
     -moz-border: 1px solid #000;
     -mz-border: 1px solid #000;
     border-bottom-color: #fff;
     cursor: pointer;
-    margin-top: -2px;
-    padding-bottom: 1px;
-    height: auto;
+    height: 36px;
 }
-div.first.menu.active .parentMenu {
+div.menu.active .parentMenu{
+
+}
+div.first.menu.active .parentMenu a{
     border-left-color: #ccc;
 }
+
 div.menu.act .parentMenu a span{
     background: #fdec3f;
 }

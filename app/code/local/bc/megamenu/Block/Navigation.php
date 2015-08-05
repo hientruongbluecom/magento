@@ -1,20 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 7/30/15
- * Time: 2:54 PM
- */
-class bc_megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
+class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 {
     const CUSTOM_BLOCK_TEMPLATE = "mgmenu_%d";
     private $_productsCount     = null;
-    private $_topMenu           = array();
-    private $_popupMenu         = array();
+    private $_topMenu           = '';
+    private $_popupMenu         = '';
     public function drawMegamenuMobileItem($category, $level = 0, $last = false)
     {
         if (!$category->getIsActive()) return '';
-        $html = array();
+        $html = '';
         $id = $category->getId();
         // --- Sub Categories ---
         $activeChildren = $this->_getActiveChildren($category, $level);
@@ -22,30 +16,30 @@ class bc_megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         $active = ''; if ($this->isCategoryActive($category)) $active = ' act';
         $hasSubMenu = count($activeChildren);
         $catUrl = $this->getCategoryUrl($category);
-        $html[] = '<div id="menu-mobile-' . $id . '" class="menu-mobile level0' . $active . '">';
-        $html[] = '<div class="parentMenu">';
+        $html.= '<div id="menu-mobile-' . $id . '" class="menu-mobile level0' . $active . '">';
+        $html.= '<div class="parentMenu">';
         // --- Top Menu Item ---
-        $html[] = '<a class="level' . $level . $active . '" href="' . $catUrl .'">';
+        $html.= '<a class="level' . $level . $active . '" href="' . $catUrl .'">';
         $name = $this->escapeHtml($category->getName());
         if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) {
             $name = str_replace(' ', '&nbsp;', $name);
         }
-        $html[] = '<span>' . $name . '</span>';
-        $html[] = '</a>';
+        $html.= '<span>' . $name . '</span>';
+        $html.= '</a>';
         if ($hasSubMenu) {
-            $html[] = '<span class="button" rel="submenu-mobile-' . $id . '" onclick="mgSubMenuToggle(this, \'menu-mobile-' . $id . '\', \'submenu-mobile-' . $id . '\');">&nbsp;</span>';
+            $html.= '<span class="button" rel="submenu-mobile-' . $id . '" onclick="mgSubMenuToggle(this, \'menu-mobile-' . $id . '\', \'submenu-mobile-' . $id . '\');">&nbsp;</span>';
         }
-        $html[] = '</div>';
+        $html.= '</div>';
         // --- Add Popup block (hidden) ---
         if ($hasSubMenu) {
             // --- draw Sub Categories ---
-            $html[] = '<div id="submenu-mobile-' . $id . '" rel="level' . $level . '" class="mg-mega-menu-submenu" style="display: none;">';
-            $html[] = $this->drawMobileMenuItem($activeChildren);
-            $html[] = '<div class="clearBoth"></div>';
-            $html[] = '</div>';
+            $html.= '<div id="submenu-mobile-' . $id . '" rel="level' . $level . '" class="mg-mega-menu-submenu" style="display: none;">';
+            $html.= $this->drawMobileMenuItem($activeChildren);
+            $html.= '<div class="clearBoth"></div>';
+            $html.= '</div>';
         }
-        $html[] = '</div>';
-        $html = implode("\n", $html);
+        $html.= '</div>';
+        $html =  $html;
         return $html;
     }
     public function getTopMenuArray()
@@ -59,7 +53,7 @@ class bc_megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
     public function drawMegamenuItem($category,$first=-1, $level = 0, $last = false)
     {
         if (!$category->getIsActive()) return;
-        $htmlTop = array();
+        $htmlTop ='';
         $id = $category->getId();
         // --- Static Block ---
         $blockId = sprintf(self::CUSTOM_BLOCK_TEMPLATE, $id); // --- static block key
@@ -78,34 +72,34 @@ class bc_megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         $drawPopup = ($blockHtml || count($activeChildren));
         if ($drawPopup) {
             if($first==0){
-                $htmlTop[] = '<div id="menu' . $id . '" class="first menu' . $active . '" onmouseover="mgShowMenuPopup(this, event, \'popup' . $id . '\');" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
+                $htmlTop.= '<div id="menu' . $id . '" class="first menu' . $active . '" onmouseover="mgShowMenuPopup(this, event, \'popup' . $id . '\');" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
 
             }else{
-                $htmlTop[] = '<div id="menu' . $id . '" class="menu' . $active . '" onmouseover="mgShowMenuPopup(this, event, \'popup' . $id . '\');" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
+                $htmlTop.= '<div id="menu' . $id . '" class="menu' . $active . '" onmouseover="mgShowMenuPopup(this, event, \'popup' . $id . '\');" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
             }
             } else {
             if($first==0){
-                $htmlTop[] = '<div id="menu' . $id . '" class="first menu' . $active . '">';
+                $htmlTop.= '<div id="menu' . $id . '" class="first menu' . $active . '">';
             }else{
-                $htmlTop[] = '<div id="menu' . $id . '" class="menu' . $active . '">';
+                $htmlTop.= '<div id="menu' . $id . '" class="menu' . $active . '">';
             }
         }
         // --- Top Menu Item ---
-        $htmlTop[] = '<div class="parentMenu">';
+        $htmlTop.= '<div class="parentMenu">';
         if ($level == 0 && $drawPopup) {
-            $htmlTop[] = '<a  class="level' . $level . $active . '" href="javascript:void(0);" rel="'.$this->getCategoryUrl($category).'">';
+            $htmlTop.= '<a  class="level' . $level . $active . '" href="javascript:void(0);" rel="'.$this->getCategoryUrl($category).'">';
         } else {
-            $htmlTop[] = '<a  class="level' . $level . $active . '" href="'.$this->getCategoryUrl($category).'">';
+            $htmlTop.= '<a  class="level' . $level . $active . '" href="'.$this->getCategoryUrl($category).'">';
         }
         $name = $this->escapeHtml($category->getName());
         if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) {
             $name = str_replace(' ', '&nbsp;', $name);
         }
-        $htmlTop[] = '<span>' . $name . '</span>';
-        $htmlTop[] = '</a>';
-        $htmlTop[] = '</div>';
-        $htmlTop[] = '</div>';
-        $this->_topMenu[] = implode("\n", $htmlTop);
+        $htmlTop.= '<span>' . $name . '</span>';
+        $htmlTop.= '</a>';
+        $htmlTop.= '</div>';
+        $htmlTop.= '</div>';
+        $this->_topMenu.=  $htmlTop;
         /*get img category parent*/
         $helper    = $this->helper('catalog/output');
         $categoryImage  = Mage::getModel('catalog/category')->load($category->getId());
@@ -117,35 +111,35 @@ class bc_megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         /*end get img category parent*/
         // --- Add Popup block (hidden) ---
         if ($drawPopup) {
-            $htmlPopup = array();
+            $htmlPopup = '';
             // --- Popup function for hide ---
-            $htmlPopup[] = '<div id="popup' . $id . '" class="mg-mega-menu-popup" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')" onmouseover="mgPopupOver(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
+            $htmlPopup.= '<div id="popup' . $id . '" class="mg-mega-menu-popup" onmouseout="mgHideMenuPopup(this, event, \'popup' . $id . '\', \'menu' . $id . '\')" onmouseover="mgPopupOver(this, event, \'popup' . $id . '\', \'menu' . $id . '\')">';
             // --- draw Sub Categories ---
-            //$htmlPopup[] = '<div class="arrow-down"></div>';
+
             if (count($activeChildren)) {
                 $columns = (int)Mage::getStoreConfig('megamenu/columns/count');
-                $htmlPopup[] = '<div class="column"';
-                $htmlPopup[] = $this->drawColumns($activeChildren, $columns);
-                $htmlPopup[] = $imgHtml;
-                $htmlPopup[] = '<div class="view_all_mn"><a  class="" href="'.$this->getCategoryUrl($category).'">';
+                $htmlPopup.= '<div class="column"';
+                $htmlPopup.= $this->drawColumns($activeChildren, $columns);
+                $htmlPopup.= $imgHtml;
+                $htmlPopup.= '<div class="view_all_mn"><a  class="" href="'.$this->getCategoryUrl($category).'">';
                 if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) {
                     $name = str_replace(' ', '&nbsp;', $name);
                 }
-                $htmlPopup[] = '<span class="go-all"> View All ' . $name . '</span>';
-                $htmlPopup[] = '<span class="go-all-icon"> >></span>';
-                $htmlPopup[] = '</a>';
-                $htmlPopup[] = '</div>';
-                $htmlPopup[] = '<div class="clearBoth"></div>';
-                $htmlPopup[] = '</div>';
+                $htmlPopup.= '<span class="go-all"> View All ' . $name . '</span>';
+                $htmlPopup.= '<span class="go-all-icon"> >></span>';
+                $htmlPopup.= '</a>';
+                $htmlPopup.= '</div>';
+                $htmlPopup.= '<div class="clearBoth"></div>';
+                $htmlPopup.= '</div>';
             }
             // --- draw Custom User Block ---
             if ($blockHtml) {
-                $htmlPopup[] = '<div id="' . $blockId . '" class="block2"';
-                $htmlPopup[] = $blockHtml;
-                $htmlPopup[] = '</div>';
+                $htmlPopup.= '<div id="' . $blockId . '" class="block2"';
+                $htmlPopup.= $blockHtml;
+                $htmlPopup.= '</div>';
             }
-            $htmlPopup[] = '</div>';
-            $this->_popupMenu[] = implode("\n", $htmlPopup);
+            $htmlPopup.= '</div>';
+            $this->_popupMenu.= $htmlPopup;
         }
     }
     public function drawMobileMenuItem($children, $level = 1)

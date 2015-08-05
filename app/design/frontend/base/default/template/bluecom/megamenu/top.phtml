@@ -6,7 +6,7 @@ extract($menuData);
 $txtLoading = '';
 $txtMenu = $this->__('Menu');
 $xRtl = $_rtl ? ' rtl' : '';
-$mgInitContent = <<<HTML
+$mgInitContent = echo '
     <div id="megamenu-loading" class="$xRtl">
         <div class="menu">
             <div class="parentMenu menu0">
@@ -43,8 +43,7 @@ $mgInitContent = <<<HTML
             </div>
             <div class="clearBoth"></div>
         </div>
-    </div>
-HTML;
+    </div>';
 ?>
 <div class="nav-container" id="mg-nav-container"></div>
 <script type="text/javascript">

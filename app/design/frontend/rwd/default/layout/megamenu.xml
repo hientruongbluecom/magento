@@ -3,4 +3,9 @@
     <default>
         <block type="megamenu/toggle"></block>
     </default>
+    <megamenu_megamenu_edit>
+        <reference name="head">
+            <action method="addItem" ><type>js</type><name>bluecom/jmmegamenu/event.simulate.js</name></action>
+        </reference>
+    </megamenu_megamenu_edit>
 </layout>

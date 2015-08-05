@@ -16,7 +16,12 @@ function mgInitMobileMenuContent()
     if (typeof mgMobileMenuContent != 'undefined') xMenu.innerHTML = mgMobileMenuContent;
     mgMobileMenuLoaded = true;
 }
-
+/**
+ * Show popup sub-menu
+ * @param objMenu
+ * @param event
+ * @param popupId
+ */
 function mgShowMenuPopup(objMenu, event, popupId)
 {
     mgInitPopupContent();
@@ -58,12 +63,18 @@ function mgShowMenuPopup(objMenu, event, popupId)
             if (typeof jQuery == 'undefined') {
                 popup.style.display = 'block';
             } else {
-                jQuery('#' + popupId).stop(true, true).fadeIn();
+                jQuery('#' + popupId).stop(true, true).show();
             }
         }, CUSTOMMENU_POPUP_DELAY_BEFORE_DISPLAYING);
     }
 }
-
+/**
+ * hide popup sub-menu
+ * @param element
+ * @param event
+ * @param popupId
+ * @param menuId
+ */
 function mgHideMenuPopup(element, event, popupId, menuId)
 {
     if (typeof mgCustommenuTimerShow[popupId] != 'undefined') clearTimeout(mgCustommenuTimerShow[popupId]);
@@ -82,7 +93,7 @@ function mgHideMenuPopup(element, event, popupId, menuId)
                         if (typeof jQuery == 'undefined') {
                             popup.style.display = 'none';
                         } else {
-                            jQuery('#' + popupId).stop(true, true).fadeOut();
+                            jQuery('#' + popupId).stop(true, true).hide();
                         }
                     }, CUSTOMMENU_POPUP_DELAY_BEFORE_HIDING);
                 }
@@ -266,8 +277,8 @@ function mgMegamenuMobileToggle()
     } else {
 
         if ($('megamenu-mobile') != undefined) $('megamenu-mobile').hide();
-        mgResetMobileMenuState();
-        if ($('megamenu') != undefined) $('megamenu').show();
+        //mgResetMobileMenuState();
+
         // --- ajax load ---
         if (mgMenuAjaxUrl) {
             new Ajax.Request(
@@ -282,7 +293,8 @@ function mgMegamenuMobileToggle()
                                 response = {};
                             }
                         }
-                        if ($('megamenu') != undefined) $('megamenu').update(response.topMenu);
+                        if ($('megamenu') != undefined) $('megamenu').show();
+                        $('megamenu').update(response.topMenu);
                         mgPopupMenuContent = response.popupMenu;
                     }
                 }

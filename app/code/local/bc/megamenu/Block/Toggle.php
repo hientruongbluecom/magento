@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 7/30/15
- * Time: 6:16 PM
- */
-class bc_megamenu_Block_Toggle extends Mage_Core_Block_Template
+class Bc_Megamenu_Block_Toggle extends Mage_Core_Block_Template
 {
     public function _prepareLayout()
     {

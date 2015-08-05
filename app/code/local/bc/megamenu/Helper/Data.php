@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 7/30/15
- * Time: 2:39 PM
- */
 class bc_megamenu_Helper_Data extends Mage_Core_Helper_Abstract
 {
     private $_menuData = null;
@@ -38,8 +32,9 @@ class bc_megamenu_Helper_Data extends Mage_Core_Helper_Abstract
         $categories = $block->getStoreCategories();
         if (is_object($categories)) $categories = $block->getStoreCategories()->getNodes();
         if (Mage::getStoreConfig('megamenu/general/ajax_load_content')) {
-            $_moblieMenuAjaxUrl = str_replace('http:', '', Mage::getUrl('megamenu/ajaxmobilemenuitem'));
-            $_menuAjaxUrl = str_replace('http:', '', Mage::getUrl('megamenu/ajaxmenuitem'));
+            $removeprotocols = array('http:', 'https:');
+            $_moblieMenuAjaxUrl = str_replace($removeprotocols, '', Mage::getUrl('megamenu/mobile'));
+            $_menuAjaxUrl = str_replace($removeprotocols, '', Mage::getUrl('megamenu/menu'));
         } else {
             $_moblieMenuAjaxUrl = '';
             $_menuAjaxUrl = '';
@@ -82,12 +77,12 @@ HTML;
         }
         // --- Menu Content ---
         $mobileMenuContent = '';
-        $mobileMenuContentArray = array();
+        $mobileMenuContentArray ='';
         foreach ($_categories as $_category) {
-            $mobileMenuContentArray[] = $_block->drawMegamenuMobileItem($_category);
+            $mobileMenuContentArray.= $_block->drawMegamenuMobileItem($_category);
         }
-        if (count($mobileMenuContentArray)) {
-            $mobileMenuContent = implode("\n", $mobileMenuContentArray);
+        if ($mobileMenuContentArray!='') {
+            $mobileMenuContent =  $mobileMenuContentArray;
         }
         // --- Result ---
         $menu = <<<HTML
@@ -118,20 +113,20 @@ HTML;
         }
         // --- Menu Content ---
         $menuContent = '';
-        $menuContentArray = array();
+        $menuContentArray = '';
         $c=0;
         foreach ($_categories as $_category) {
             $_block->drawMegamenuItem($_category,$c);
             $c++;
         }
         $topMenuArray = $_block->getTopMenuArray();
-        if (count($topMenuArray)) {
-            $topMenuContent = implode("\n", $topMenuArray);
+        if ($topMenuArray!='') {
+            $topMenuContent =  $topMenuArray;
         }
         $popupMenuArray = $_block->getPopupMenuArray();
         $popupMenuContent = '';
-        if (count($popupMenuArray)) {
-            $popupMenuContent = implode("\n", $popupMenuArray);
+        if ($popupMenuArray!='') {
+            $popupMenuContent = $popupMenuArray;
         }
         // --- Result ---
         $topMenu = <<<HTML

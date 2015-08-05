@@ -16,7 +16,12 @@ function mgInitMobileMenuContent()
     if (typeof mgMobileMenuContent != 'undefined') xMenu.innerHTML = mgMobileMenuContent;
     mgMobileMenuLoaded = true;
 }
-
+/**
+ * Show popup sub-menu
+ * @param objMenu
+ * @param event
+ * @param popupId
+ */
 function mgShowMenuPopup(objMenu, event, popupId)
 {
     mgInitPopupContent();
@@ -58,12 +63,18 @@ function mgShowMenuPopup(objMenu, event, popupId)
             if (typeof jQuery == 'undefined') {
                 popup.style.display = 'block';
             } else {
-                jQuery('#' + popupId).stop(true, true).fadeIn();
+                jQuery('#' + popupId).stop(true, true).show();
             }
         }, CUSTOMMENU_POPUP_DELAY_BEFORE_DISPLAYING);
     }
 }
-
+/**
+ * hide popup sub-menu
+ * @param element
+ * @param event
+ * @param popupId
+ * @param menuId
+ */
 function mgHideMenuPopup(element, event, popupId, menuId)
 {
     if (typeof mgCustommenuTimerShow[popupId] != 'undefined') clearTimeout(mgCustommenuTimerShow[popupId]);
@@ -82,7 +93,7 @@ function mgHideMenuPopup(element, event, popupId, menuId)
                         if (typeof jQuery == 'undefined') {
                             popup.style.display = 'none';
                         } else {
-                            jQuery('#' + popupId).stop(true, true).fadeOut();
+                            jQuery('#' + popupId).stop(true, true).hide();
                         }
                     }, CUSTOMMENU_POPUP_DELAY_BEFORE_HIDING);
                 }

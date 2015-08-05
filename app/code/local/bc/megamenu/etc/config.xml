@@ -92,8 +92,8 @@
             <popup>
                 <width>0</width>
                 <top_offset>0</top_offset>
-                <delay_displaying>100</delay_displaying>
-                <delay_hiding>100</delay_hiding>
+                <delay_displaying>0</delay_displaying>
+                <delay_hiding>0</delay_hiding>
             </popup>
         </megamenu>
     </default>
