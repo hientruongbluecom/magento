@@ -9,7 +9,6 @@ class Bc_Megamenu_Block_Toggle extends Mage_Core_Block_Template
         $head   = $layout->getBlock('head');
         if (is_object($topnav) && is_object($head)) {
             $topnav->setTemplate('bluecom/megamenu/top.phtml');
-            $head->addItem('skin_js', 'bluecom/megamenu/js/megamenu.js');
             $head->addItem('skin_css', 'bluecom/megamenu/css/megamenu.css');
             // --- Insert menu content ---
             if (!Mage::getStoreConfig('megamenu/general/ajax_load_content')) {
