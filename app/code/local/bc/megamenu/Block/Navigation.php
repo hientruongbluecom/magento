@@ -4,65 +4,22 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
     const CUSTOM_BLOCK_TEMPLATE = "mgmenu_%d";
     private $_productsCount     = null;
     private $_topMenu           = '';
-    private $_popupMenu         = '';
-    public function drawMegamenuMobileItem($category, $level = 0, $last = false)
-    {
-        if (!$category->getIsActive()) return '';
-        $html = '';
-        $id = $category->getId();
-        // --- Sub Categories ---
-        $activeChildren = $this->_getActiveChildren($category, $level);
-        // --- class for active category ---
-        $active = ''; if ($this->isCategoryActive($category)) $active = ' act';
-        $hasSubMenu = count($activeChildren);
-        $catUrl = $this->getCategoryUrl($category);
-        $html.= '<div id="menu-mobile-' . $id . '" class="menu-mobile level0' . $active . '">';
-        $html.= '<div class="parentMenu">';
-        // --- Top Menu Item ---
-        $html.= '<a class="level' . $level . $active . '" href="' . $catUrl .'">';
-        $name = $this->escapeHtml($category->getName());
-        if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) {
-            $name = str_replace(' ', '&nbsp;', $name);
-        }
-        $html.= '<span>' . $name . '</span>';
-        $html.= '</a>';
-        if ($hasSubMenu) {
-            $html.= '<span class="button" rel="submenu-mobile-' . $id . '" onclick="mgSubMenuToggle(this, \'menu-mobile-' . $id . '\', \'submenu-mobile-' . $id . '\');">&nbsp;</span>';
-        }
-        $html.= '</div>';
-        // --- Add Popup block (hidden) ---
-        if ($hasSubMenu) {
-            // --- draw Sub Categories ---
-            $html.= '<div id="submenu-mobile-' . $id . '" rel="level' . $level . '" class="mg-mega-menu-submenu" style="display: none;">';
-            $html.= $this->drawMobileMenuItem($activeChildren);
-            $html.= '<div class="clearBoth"></div>';
-            $html.= '</div>';
-        }
-        $html.= '</div>';
-        $html =  $html;
-        return $html;
-    }
+    private $_listcategory      = [];
     public function getTopMenuArray()
     {
         return $this->_topMenu;
     }
-    public function getPopupMenuArray()
-    {
-        return $this->_popupMenu;
-    }
-    public function drawMegamenuItem($category,$first=-1, $level = 0, $last = false)
+    public function drawMegamenuItem($category, $level = 0, $last = false)
     {
         if (!$category->getIsActive()) return;
         $htmlTop ='';
         $id = $category->getId();
         // --- Static Block ---
         $blockId = sprintf(self::CUSTOM_BLOCK_TEMPLATE, $id); // --- static block key
-        #Mage::log($blockId);
         $collection = Mage::getModel('cms/block')->getCollection()
             ->addFieldToFilter('identifier', array(array('like' => $blockId . '_w%'), array('eq' => $blockId)))
             ->addFieldToFilter('is_active', 1);
         $blockId = $collection->getFirstItem()->getIdentifier();
-        #Mage::log($blockId);
         $blockHtml = Mage::app()->getLayout()->createBlock('cms/block')->setBlockId($blockId)->toHtml();
         // --- Sub Categories level 0 ---
         $activeChildren = $this->_getActiveChildren($category, $level);
@@ -70,16 +27,9 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         $active = ''; if ($this->isCategoryActive($category)) $active = ' act';
         // --- Popup functions for show ---
         $drawPopup = ($blockHtml || count($activeChildren));
+        $htmlTop.= '<li id="menu' . $id . '" class="menu' . $active . '" >';
 
-        if($first==0){
-            $htmlTop.= '<li id="menu' . $id . '" class="first menu' . $active . '">';
-
-        }else{
-            $htmlTop.= '<li id="menu' . $id . '" class="menu' . $active . '" >';
-        }
         // --- Top Menu Item ---
-        //$htmlTop.= '<div class="parentMenu">';
-
         $htmlTop.= '<a  class="level' . $level . $active . '" href="'.$this->getCategoryUrl($category).'">';
 
         $name = $this->escapeHtml($category->getName());
@@ -102,7 +52,7 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         if ($drawPopup) {
             //$htmlPopup = '';
             // --- Popup function for hide ---
-            $htmlTop.= '<ul id="popup' . $id . '" class="mg-mega-menu-popup" >';
+            $htmlTop.= '<ul id="sub-menu' . $id . '" class="mg-mega-menu-popup" >';
             // --- draw Sub Categories ---
 
             if (count($activeChildren)) {
@@ -131,42 +81,6 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         $this->_topMenu.=  $htmlTop;
 
     }
-    public function drawMobileMenuItem($children, $level = 1)
-    {
-        $keyCurrent = $this->getCurrentCategory()->getId();
-        $html = '';
-        foreach ($children as $child) {
-            if (is_object($child) && $child->getIsActive()) {
-                // --- class for active category ---
-                $active = '';
-                $id = $child->getId();
-                $activeChildren = $this->_getActiveChildren($child, $level);
-                if ($this->isCategoryActive($child)) {
-                    $active = ' actParent';
-                    if ($id == $keyCurrent) $active = ' act';
-                }
-                $html.= '<div id="menu-mobile-' . $id . '" class="itemMenu level' . $level . $active . '">';
-                // --- format category name ---
-                $name = $this->escapeHtml($child->getName());
-                if (Mage::getStoreConfig('megamenu/general/non_breaking_space')) $name = str_replace(' ', '&nbsp;', $name);
-                $html.= '<div class="parentMenu">';
-                $html.= '<a class="itemMenuName level' . $level . $active . '" href="' . $this->getCategoryUrl($child) . '"><span>' . $name . '</span></a>';
-                if (count($activeChildren) > 0) {
-                    $html.= '<span class="button" rel="submenu-mobile-' . $id . '" onclick="mgSubMenuToggle(this, \'menu-mobile-' . $id . '\', \'submenu-mobile-' . $id . '\');">&nbsp;</span>';
-                }
-                $html.= '</div>';
-                if (count($activeChildren) > 0) {
-                    $html.= '<div id="submenu-mobile-' . $id . '" rel="level' . $level . '" class="mg-mega-menu-submenu level' . $level . '" style="display: none;">';
-                    $html.= $this->drawMobileMenuItem($activeChildren, $level + 1);
-                    $html.= '<div class="clearBoth"></div>';
-                    $html.= '</div>';
-                }
-                $html.= '</div>';
-            }
-        }
-        return $html;
-    }
-
     public function drawMenuItem($children, $level = 1)
     {
         $html = '<div class="itemMenu level' . $level . '">';
@@ -264,7 +178,6 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
             $data = $this->_getProductsCountData();
             // --- check by id ---
             $id = $child->getId();
-            #Mage::log($id); Mage::log($data);
             if (!isset($data[$id]) || !$data[$id]['product_count']) return false;
         }
         // === / check products count ===
@@ -288,19 +201,19 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
                     'product_count' => $cat->getProductCount(),
                 );
             }
-            #Mage::log($productsCount);
             $this->_productsCount = $productsCount;
         }
         return $this->_productsCount;
     }
     private function _explodeByColumns($target, $num)
     {
+
         if ((int)Mage::getStoreConfig('megamenu/columns/divided_horizontally')) {
             $target = self::_explodeArrayByColumnsHorisontal($target, $num);
         } else {
             $target = self::_explodeArrayByColumnsVertical($target, $num);
         }
-        #return $target;
+
         if ((int)Mage::getStoreConfig('megamenu/columns/integrate') && count($target)) {
             // --- combine consistently numerically small column ---
             // --- 1. calc length of each column ---
@@ -343,10 +256,7 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
                 $target = $xColumns;
             }
         }
-        $_rtl = Mage::getStoreConfigFlag('megamenu/general/rtl');
-        if ($_rtl) {
-            $target = array_reverse($target);
-        }
+
         return $target;
     }
     private function _countChild($children, $level, &$count)

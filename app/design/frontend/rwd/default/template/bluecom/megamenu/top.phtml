@@ -5,9 +5,8 @@ extract($menuData);
 // ---
 $txtLoading = '';
 $txtMenu = $this->__('Menu');
-$xRtl = $_rtl ? ' rtl' : '';
 $mgInitContent = '
-    <ul id="megamenu" class="$xRtl" >
+    <ul id="megamenu"  >
         <div class="menu">
             <div class="parentMenu menu0">
                 <a href="javascript:;">
@@ -21,20 +20,7 @@ $mgInitContent = '
 <div class="nav-container" id="mg-nav-container"></div>
 <script type="text/javascript">
     //<![CDATA[
-    var CUSTOMMENU_POPUP_WIDTH = <?php echo $_popupWidth; ?>;
-    var CUSTOMMENU_POPUP_TOP_OFFSET = <?php echo $_popupTopOffset; ?>;
-    var CUSTOMMENU_POPUP_DELAY_BEFORE_DISPLAYING = <?php echo $_popupDelayBeforeDisplaying; ?>;
-    var CUSTOMMENU_POPUP_DELAY_BEFORE_HIDING = <?php echo $_popupDelayBeforeHiding; ?>;
-    var CUSTOMMENU_RTL_MODE = <?php echo $_rtl; ?>;
-    var CUSTOMMENU_MOBILE_MENU_WIDTH_INIT = <?php echo $_mobileMenuWidthInit; ?>;
-    var mgCustommenuTimerShow = {};
-    var mgCustommenuTimerHide = {};
     var mgActiveMenu = null;
-    var mgMobileMenuEnabled = <?php echo $_mobileMenuEnabled; ?>;
-    var mgMenuAjaxUrl = '<?php echo $_menuAjaxUrl; ?>';
-    var mgMoblieMenuAjaxUrl = '<?php echo $_moblieMenuAjaxUrl; ?>';
-    var mgPopupMenuContent = '';
-    var mgMobileMenuContent = '';
     if ($('mg-nav-container') != undefined) {
         $('mg-nav-container').update(<?php echo Mage::helper('core')->jsonEncode($mgInitContent); ?>);
     }

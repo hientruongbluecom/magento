@@ -64,7 +64,7 @@
                         </display_empty_categories>
 
                     </fields>
-                    <comment><![CDATA[If You Want to Display custom block with images or other html content in Menu Block, use the <b>Static Block</b> (<strong>CMS->Static Blocks</strong> section) with the ID like "<b>mgmenu_CategoryId</b>", In Place "CategoryId" provide the ID of the category in which you want to display the block <br /><br />]]></comment>
+                    <comment><![CDATA[If You Want to Display custom block with images or other html content in Menu Block, use the <b>Static Block</b> (<strong>CMS->Static Blocks</strong> section) with the ID like "<b>mgmenu_CategoryId</b>", In Place "CategoryId" provide the ID of the category in which you want to display the block.e.g. mgmenu_28, mgmenu_100,...<br /><br />]]></comment>
                 </general>
                 <columns translate="label">
                     <label>Columns</label>
@@ -76,7 +76,7 @@
                     <fields>
                         <count translate="label comment">
                             <label>Number of columns</label>
-                            <comment><![CDATA[The maximum number of columns in the popup, <br />e.g. 1, 2, 3]]></comment>
+                            <comment><![CDATA[The maximum number of columns in the sub-menu, <br />e.g. 1, 2, 3]]></comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
@@ -85,7 +85,7 @@
                         </count>
                         <litmit_row translate="label comment">
                             <label>Number of rows</label>
-                            <comment><![CDATA[The maximum number of row in the popup, <br />e.g. 1, 2, 3]]></comment>
+                            <comment><![CDATA[The maximum number of row in the sub-menu, <br />e.g. 1, 2, 3]]></comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -113,52 +113,6 @@
                         </integrate>
                     </fields>
                 </columns>
-                <popup translate="label">
-                    <label>Block settings</label>
-                    <frontend_type>text</frontend_type>
-                    <sort_order>20</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-                        <width translate="label comment">
-                            <label>Block Width</label>
-                            <comment>Pixels. Set "0" to disable fixed width. By default it is 100%</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>1</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </width>
-                        <top_offset translate="label comment">
-                            <label>Top offset</label>
-                            <comment>Pixels. Set "0" to calculate the offset automatically</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>3</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </top_offset>
-                        <delay_displaying translate="label comment">
-                            <label>Delay before displaying</label>
-                            <comment>Milliseconds</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>15</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </delay_displaying>
-                        <delay_hiding translate="label comment">
-                            <label>Delay before hiding</label>
-                            <comment>Milliseconds</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>20</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </delay_hiding>
-                    </fields>
-                </popup>
             </groups>
         </megamenu>
     </sections>

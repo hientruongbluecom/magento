@@ -74,14 +74,10 @@
         <megamenu>
             <general>
                 <enabled>0</enabled>
-                <ajax_load_content>0</ajax_load_content>
-                <mobile_menu>0</mobile_menu>
-                <mobile_menu_width_init>600</mobile_menu_width_init>
                 <display_empty_categories>1</display_empty_categories>
                 <max_level>4</max_level>
                 <show_home_link>1</show_home_link>
                 <non_breaking_space>0</non_breaking_space>
-                <rtl>0</rtl>
             </general>
             <columns>
                 <count>3</count>
@@ -89,12 +85,6 @@
                 <divided_horizontally>0</divided_horizontally>
                 <integrate>1</integrate>
             </columns>
-            <popup>
-                <width>0</width>
-                <top_offset>0</top_offset>
-                <delay_displaying>0</delay_displaying>
-                <delay_hiding>0</delay_hiding>
-            </popup>
         </megamenu>
     </default>
 </config>

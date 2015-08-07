@@ -240,34 +240,7 @@ div.itemSubMenu {
 div.level1 {
     margin-bottom: 0px;
 }
-/*BG*/
-#megamenu {
-}
-div.mg-mega-menu-popup {
-    background-color: #fbfbfb;
-    border: 1px solid #c9c7c8;
-    border-top: none;
-    z-index: 10000;
-    min-height: 219px;
-    margin: 0;
-    padding: 3px 0 0 14px;
-    overflow: hidden;
-}
-div.menu a:hover {
-    background: #ffffff;
-}
-div.menu a, div.mg-mega-menu-popup a {
-    -webkit-transition: all .1s linear;
-    -moz-transition: all .1s linear;
-    -ms-transition: all .1s linear;
-    transition: all .1s linear;
-}
-div.menu .brand a, div.mg-mega-menu-popup .brand a {
-    -webkit-transition: all 0s linear;
-    -moz-transition: all 0s linear;
-    -ms-transition: all 0s linear;
-    transition: all 0s linear;
-}
+
 /*FONTS*/
 div.menu {
     font-weight: normal;
@@ -283,19 +256,6 @@ a.level2:link, a.level2:visited {
     font-weight: normal;
     font-size: 14px;
     line-height: 25px;
-}
-/*COLOR*/
-div.menu a:link, div.menu a:visited {
-    color: #000;
-}
-a.level1:link, a.level1:visited {
-    color: #636363;
-}
-a.level2:link, a.level2:visited {
-    color: #636363;
-}
-a.level1:hover, a.level1.act, a.level1.act {
-    color: #3399cc;
 }
 a.level2:hover, a.level2.act, a.level2.act {
     color: #3399cc;
@@ -320,56 +280,6 @@ html[xmlns] #menu-button, html[xmlns] .parentMenu {
 }
 * html #menu-button, * html .parentMenu {
     height: 1%;
-}
-/*#menu-button:after, .parentMenu:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}*/
-#megamenu-mobile {
-    position:relative;
-    margin: 0 auto;
-    padding: 0;
-    z-index: 999;
-}
-#menu-button {
-    float: none;
-    padding: 10px 0px 10px 0px;
-    margin: 0px 0px 0px 0px;
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    text-transform: uppercase;
-    display: none;
-}
-#menu-button a:link, #menu-button a:visited {
-    color: #fff;
-    display: block;
-    float: left;
-    margin-left: 45%;
-    position: relative;
-    padding: 0px 10px;
-}
-#menu-button a span:after {
-    display: block;
-    position: relative;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 4px solid #dadada;
-    margin: 8px 0px 0px 5px;
-    float: right;
-    opacity: 0.7;
-}
-#menu-button:hover {
-    cursor: pointer;
-}
-#menu-button:hover a:after {
-    opacity: 1;
 }
 .view_all_mn {
     clear: both;

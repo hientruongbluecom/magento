@@ -31,67 +31,15 @@ class bc_megamenu_Helper_Data extends Mage_Core_Helper_Abstract
         $block = new $blockClassName();
         $categories = $block->getStoreCategories();
         if (is_object($categories)) $categories = $block->getStoreCategories()->getNodes();
-        if (Mage::getStoreConfig('megamenu/general/ajax_load_content')) {
-            $removeprotocols = array('http:', 'https:');
-            $_moblieMenuAjaxUrl = str_replace($removeprotocols, '', Mage::getUrl('megamenu/mobile'));
-            $_menuAjaxUrl = str_replace($removeprotocols, '', Mage::getUrl('megamenu/menu'));
-        } else {
-            $_moblieMenuAjaxUrl = '';
-            $_menuAjaxUrl = '';
-        }
+
         $this->_menuData = array(
             '_block'                        => $block,
             '_categories'                   => $categories,
-            '_moblieMenuAjaxUrl'            => $_moblieMenuAjaxUrl,
-            '_menuAjaxUrl'                  => $_menuAjaxUrl,
             '_showHomeLink'                 => Mage::getStoreConfig('megamenu/general/show_home_link'),
-            '_popupWidth'                   => Mage::getStoreConfig('megamenu/popup/width') + 0,
-            '_popupTopOffset'               => Mage::getStoreConfig('megamenu/popup/top_offset') + 0,
-            '_popupDelayBeforeDisplaying'   => Mage::getStoreConfig('megamenu/popup/delay_displaying') + 0,
-            '_popupDelayBeforeHiding'       => Mage::getStoreConfig('megamenu/popup/delay_hiding') + 0,
-            '_rtl'                          => Mage::getStoreConfig('megamenu/general/rtl') + 0,
-            '_mobileMenuEnabled'            => Mage::getStoreConfig('megamenu/general/mobile_menu') + 0,
-            '_mobileMenuWidthInit'          => Mage::getStoreConfig('megamenu/general/mobile_menu_width_init') + 0,
         );
         return $this->_menuData;
     }
-    public function getMobileMenuContent()
-    {
-        $menuData = Mage::helper('megamenu')->getMenuData();
-        extract($menuData);
-        if (!$_mobileMenuEnabled) return '';
-        // --- Home Link ---
-        $homeLinkUrl        = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
-        $homeLinkText       = $this->__('Home');
-        $homeLink           = '';
-        if ($_showHomeLink) {
-            $homeLink = <<<HTML
-<div id="menu-mobile-0" class="menu-mobile level0">
-    <div class="parentMenu">
-        <a href="$homeLinkUrl">
-            <span>$homeLinkText</span>
-        </a>
-    </div>
-</div>
-HTML;
-        }
-        // --- Menu Content ---
-        $mobileMenuContent = '';
-        $mobileMenuContentArray ='';
-        foreach ($_categories as $_category) {
-            $mobileMenuContentArray.= $_block->drawMegamenuMobileItem($_category);
-        }
-        if ($mobileMenuContentArray!='') {
-            $mobileMenuContent =  $mobileMenuContentArray;
-        }
-        // --- Result ---
-        $menu = <<<HTML
-$homeLink
-$mobileMenuContent
-<div class="clearBoth"></div>
-HTML;
-        return $menu;
-    }
+
     public function getMenuContent()
     {
         $menuData = Mage::helper('megamenu')->getMenuData();
@@ -102,31 +50,22 @@ HTML;
         $homeLink           = '';
         if ($_showHomeLink) {
             $homeLink = <<<HTML
-<div class="menu">
-    <div class="parentMenu menu0">
-        <a href="$homeLinkUrl">
+<li class="menu">
+        <a class="level0" href="$homeLinkUrl">
             <span>$homeLinkText</span>
         </a>
-    </div>
-</div>
+</li>
 HTML;
         }
         // --- Menu Content ---
         $menuContent = '';
         $menuContentArray = '';
-        $c=0;
         foreach ($_categories as $_category) {
-            $_block->drawMegamenuItem($_category,$c);
-            $c++;
+            $_block->drawMegamenuItem($_category);
         }
         $topMenuArray = $_block->getTopMenuArray();
         if ($topMenuArray!='') {
             $topMenuContent =  $topMenuArray;
-        }
-        $popupMenuArray = $_block->getPopupMenuArray();
-        $popupMenuContent = '';
-        if ($popupMenuArray!='') {
-            $popupMenuContent = $popupMenuArray;
         }
         // --- Result ---
         $topMenu = <<<HTML
@@ -134,6 +73,6 @@ $homeLink
 $topMenuContent
 <div class="clearBoth"></div>
 HTML;
-        return array('topMenu' => $topMenu, 'popupMenu' => $popupMenuContent);
+        return array('topMenu' => $topMenu);
     }
 }

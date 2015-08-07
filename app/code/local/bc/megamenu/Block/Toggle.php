@@ -11,15 +11,14 @@ class Bc_Megamenu_Block_Toggle extends Mage_Core_Block_Template
             $topnav->setTemplate('bluecom/megamenu/top.phtml');
             $head->addItem('skin_css', 'bluecom/megamenu/css/megamenu.css');
             // --- Insert menu content ---
-            if (!Mage::getStoreConfig('megamenu/general/ajax_load_content')) {
-                $menuContent = $layout->getBlock('megamenu-content');
-                if (!is_object($menuContent)) {
-                    $menuContent = $layout->createBlock('core/template', 'megamenu-content')
-                        ->setTemplate('bluecom/megamenu/menucontent.phtml');
-                }
-                $positionTarget = $layout->getBlock('before_body_end');
-                if (is_object($positionTarget)) $positionTarget->append($menuContent);
+            $menuContent = $layout->getBlock('megamenu-content');
+            if (!is_object($menuContent)) {
+                $menuContent = $layout->createBlock('core/template', 'megamenu-content')
+                    ->setTemplate('bluecom/megamenu/menucontent.phtml');
             }
+            $positionTarget = $layout->getBlock('before_body_end');
+            if (is_object($positionTarget)) $positionTarget->append($menuContent);
+
         }
     }
 }
