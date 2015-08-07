@@ -160,12 +160,13 @@ div.block2 p {
     color: #000;
     font-size: 11px;
 }
-div.block2 {float: right;
+div.block2 {
+    float: right;
     top:0;
     padding-top: 10px;
     margin-top: 10px;
-    box-shadow: 0px 1px 8px 0px #888888;
-    position: relative;}
+    position: relative;
+}
 div.block2 p a {
     display: inline;
 }

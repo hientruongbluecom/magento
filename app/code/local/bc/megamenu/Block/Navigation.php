@@ -70,9 +70,9 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
             }
             // --- draw Custom User Block ---
             if ($blockHtml) {
-                $htmlTop.= '<ul id="' . $blockId . '" class="block2"';
+                $htmlTop.= '<div id="' . $blockId . '" class="block2">';
                 $htmlTop.= $blockHtml;
-                $htmlTop.= '</ul>';
+                $htmlTop.= '</div>';
             }
             $htmlTop.= '</ul>';
         }
