@@ -76,7 +76,7 @@
                 <enabled>0</enabled>
                 <display_empty_categories>1</display_empty_categories>
                 <max_level>4</max_level>
-                <show_home_link>1</show_home_link>
+                <show_home_link>0</show_home_link>
                 <non_breaking_space>0</non_breaking_space>
             </general>
             <columns>
