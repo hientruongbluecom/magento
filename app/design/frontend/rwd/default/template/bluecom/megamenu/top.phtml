@@ -1,29 +1,13 @@
-<?php
-Mage::helper('megamenu')->saveCurrentCategoryIdToSession();
-$menuData = Mage::helper('megamenu')->getMenuData();
-extract($menuData);
-// ---
-$txtLoading = '';
-$txtMenu = $this->__('Menu');
-$mgInitContent = '
-    <ul id="megamenu"  >
-        <div class="menu">
-            <div class="parentMenu menu0">
-                <a href="javascript:;">
-                    <span>$txtLoading</span>
-                </a>
-            </div>
-        </div>
+<div class="nav-container" id="mg-nav-container">
+    <ul id="megamenu">
+        <?php if (Mage::getStoreConfig('megamenu/general/show_home_link')) { ?>
+        <li id="menu-home" class="menu">
+            <a class="level0" href="<?php echo $this->getUrl() ?>">
+                <span><?php echo $this->__('Home');?></span>
+            </a>
+        </li>
+        <?php } ?>
+        <?php echo Mage::helper('megamenu')->getMenuContent(); ?>
         <div class="clearBoth"></div>
-    </ul>';
-?>
-<div class="nav-container" id="mg-nav-container"></div>
-<script type="text/javascript">
-    //<![CDATA[
-    var mgActiveMenu = null;
-    if ($('mg-nav-container') != undefined) {
-        $('mg-nav-container').update(<?php echo Mage::helper('core')->jsonEncode($mgInitContent); ?>);
-    }
-
-    //]]>
-</script>
+    </ul>
+</div>

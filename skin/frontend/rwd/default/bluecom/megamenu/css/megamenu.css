@@ -1,6 +1,5 @@
-#header-nav {
-    display: block;
-    border-bottom:0px !important;
+#mg-nav-container {
+    border-bottom: 0px !important;
     min-height: 36px;
 }
 a:hover {
@@ -31,7 +30,6 @@ a:hover {
     display: block;
     text-decoration: none;
     font-weight: normal;
-    float: left;
     padding: 8px 8px 3px 8px;
     border: 1px solid transparent;
     height: 36px;
@@ -41,6 +39,9 @@ a:hover {
     border: 1px solid #000;
     border-bottom-color: #fff;
     cursor: pointer;
+}
+#megamenu > li#menu-home > a.level0:hover, #megamenu > li#menu-home > a.level0:active, #megamenu > li#menu-home:hover > a.level0 {
+    border-bottom-color: #000;
 }
 #megamenu > li.menu:first-child:hover > a.level0 {
     border-left-color: #ccc;
@@ -341,3 +342,43 @@ img.mega-nav-item-image {
     width: 250px;
     height: auto;
 }
+@media only screen and (max-width: 770px) {
+    #mg-nav-container{
+        min-height: auto;
+    }
+    #megamenu {
+         height: auto;
+         margin: 0;
+         background: none;
+         float: none;
+    }
+    #megamenu li.menu{
+        float: none;
+    }
+    #megamenu li.parent > a.level0:after {
+        content: '';
+        display: block;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid #cccccc;
+        border-right: none;
+        margin-top: -15px;
+    }
+    #megamenu li.parent > a.level0 > span {
+        padding-left: 10px;
+    }
+    #megamenu li.menu a.level0{
+        border-bottom: 1px solid #cccccc;
+    }
+    #megamenu li.menu:last-child a.level0 {
+        border-bottom: 0;
+    }
+    a.level0.act span {
+        background: none;
+    }
+    #megamenu .menu-active > ul.level0{
+        display: block;
+    }
+
+}
+

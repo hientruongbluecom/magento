@@ -42,6 +42,9 @@ a:hover {
     border-bottom-color: #fff;
     cursor: pointer;
 }
+#megamenu > li#menu-home > a.level0:hover, #megamenu > li#menu-home > a.level0:active, #megamenu > li#menu-home:hover > a.level0 {
+    border-bottom-color: #000;
+}
 #megamenu > li.menu:first-child:hover > a.level0 {
     border-left-color: #ccc;
 }

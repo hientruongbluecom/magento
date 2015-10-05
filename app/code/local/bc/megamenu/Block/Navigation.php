@@ -1,10 +1,10 @@
 <?php
-class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
+class Bc_MegaMenu_Block_Navigation extends Mage_Catalog_Block_Navigation
 {
     const CUSTOM_BLOCK_TEMPLATE = "mgmenu_%d";
     private $_productsCount     = null;
     private $_topMenu           = '';
-    private $_listcategory      = [];
+
     public function getTopMenuArray()
     {
         return $this->_topMenu;
@@ -24,10 +24,13 @@ class Bc_Megamenu_Block_Navigation extends Mage_Catalog_Block_Navigation
         // --- Sub Categories level 0 ---
         $activeChildren = $this->_getActiveChildren($category, $level);
         // --- class for active category ---
-        $active = ''; if ($this->isCategoryActive($category)) $active = ' act';
+        $active = '';
+        $parent = '';
+        if ($this->isCategoryActive($category)) $active = ' act';
         // --- Popup functions for show ---
         $drawPopup = ($blockHtml || count($activeChildren));
-        $htmlTop.= '<li id="menu' . $id . '" class="menu' . $active . '" >';
+        $parent = $drawPopup? 'parent' : '';
+        $htmlTop.= '<li id="menu' . $id . '" class="menu' . $active .' '.$parent.'" >';
 
         // --- Top Menu Item ---
         $htmlTop.= '<a  class="level' . $level . $active . '" href="'.$this->getCategoryUrl($category).'">';

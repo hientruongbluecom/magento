@@ -1,8 +1,0 @@
-<script type="text/javascript">
-    //<![CDATA[
-    <?php $menuContent = Mage::helper('megamenu')->getMenuContent(); ?>
-    if ($('megamenu') != undefined) {
-        $('megamenu').update(<?php echo Mage::helper('core')->jsonEncode($menuContent['topMenu']); ?>);
-    }
-    //]]>
-</script>

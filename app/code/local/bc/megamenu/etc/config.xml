@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <bc_megamenu>
-            <version>0.1.0</version>    <!-- Version number of your module -->
-        </bc_megamenu>
+        <Bc_MegaMenu>
+            <version>0.1.0</version>
+        </Bc_MegaMenu>
     </modules>
     <frontend>
         <routers>
             <megamenu>
                 <use>standard</use>
                 <args>
-                    <module>bc_megamenu</module>
+                    <module>Bc_MegaMenu</module>
                     <frontName>megamenu</frontName>
                 </args>
             </megamenu>
@@ -50,23 +50,13 @@
     </adminhtml>
     <global>
         <blocks>
-            <catalog>
-                <rewrite>
-                    <navigation>bc_megamenu_Block_Navigation</navigation>
-                </rewrite>
-            </catalog>
-            <page>
-                <rewrite>
-                    <html_topmenu>bc_megamenu_Block_Topmenu</html_topmenu>
-                </rewrite>
-            </page>
             <megamenu>
-                <class>bc_megamenu_Block</class>
+                <class>Bc_MegaMenu_Block</class>
             </megamenu>
         </blocks>
         <helpers>
             <megamenu>
-                <class>bc_megamenu_Helper</class>
+                <class>Bc_MegaMenu_Helper</class>
             </megamenu>
         </helpers>
     </global>
@@ -75,7 +65,7 @@
             <general>
                 <enabled>0</enabled>
                 <display_empty_categories>1</display_empty_categories>
-                <max_level>4</max_level>
+                <max_level>3</max_level>
                 <show_home_link>0</show_home_link>
                 <non_breaking_space>0</non_breaking_space>
             </general>
