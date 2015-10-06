@@ -379,6 +379,18 @@ img.mega-nav-item-image {
     #megamenu .menu-active > ul.level0{
         display: block;
     }
-
+    #megamenu > li.menu > a.level0:hover, #megamenu > li.menu > a.level0:active, #megamenu > li.menu:hover > a.level0{
+        background: none;
+        border: 0px;
+    }
+    .mg-mega-menu-popup{
+        position: inherit;
+    }
+    .thumb-image-menu{
+        display: none;
+    }
+    .view_all_mn {
+        position: inherit;
+    }
 }
 
